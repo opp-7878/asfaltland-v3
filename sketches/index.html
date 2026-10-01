@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AsfaltLand v3: эскизы</title>
+<style>
+:root{--bg:hsl(220 10% 95%);--ink:hsl(222 30% 12%);--mute:hsl(222 8% 42%)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,sans-serif;padding:24px}
+h1{font-size:20px;margin-bottom:4px}
+.intro{color:var(--mute);margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(560px,1fr));gap:24px}
+figure{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 2px hsl(222 30% 20% / .12),0 4px 16px hsl(222 30% 20% / .06)}
+.frame{position:relative;width:100%;aspect-ratio:1440/900;overflow:hidden;background:#ddd}
+.frame iframe{position:absolute;left:0;top:0;width:1440px;height:900px;border:0;transform-origin:0 0}
+figcaption{padding:14px 16px;display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+figcaption b{font-size:16px}
+figcaption p{color:var(--mute);font-size:14px;margin-top:2px}
+figcaption a{white-space:nowrap;color:hsl(221 72% 38%);font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<h1>Новые варианты: идея B (слои) во внешности C (кино)</h1>
+<p class="intro">Везде одинаковые фото, лого, цены и текст из v2. Анимации работают, при открытии эскиз проигрывает их заново. Это только первый экран: остальная страница будет в выбранном стиле.</p>
+<div class="grid">
+  <figure><div class="frame"><iframe src="e-cut.html" title="E" loading="eager"></iframe></div><figcaption><div><b>E. Срез</b><p>Как C, но под фото дорога «вскрывается»: видно слои с толщинами. Заголовок стоит на границе.</p></div><a href="e-cut.html" target="_blank">На весь экран</a></figcaption></figure>
+  <figure><div class="frame"><iframe src="f-core.html" title="F" loading="eager"></iframe></div><figcaption><div><b>F. Керн</b><p>Как презентация премиум-продукта: в кадре медленно вращается образец дороги, выноски к слоям.</p></div><a href="f-core.html" target="_blank">На весь экран</a></figcaption></figure>
+  <figure><div class="frame"><iframe src="g-reveal.html" title="G" loading="eager"></iframe></div><figcaption><div><b>G. Было и сдали</b><p>Первый экран — это сам слайдер «до/после» на весь экран, линия сама проезжает при загрузке. Можно тянуть.</p></div><a href="g-reveal.html" target="_blank">На весь экран</a></figcaption></figure>
+  <figure><div class="frame"><iframe src="h-light.html" title="H" loading="eager"></iframe></div><figcaption><div><b>H. Разнесённая схема, светлая</b><p>Светлый вариант для контраста: слои дороги расходятся в объёме, как на схеме Apple.</p></div><a href="h-light.html" target="_blank">На весь экран</a></figcaption></figure>
+</div>
+<h1 style="margin-top:40px">Первый набор</h1>
+<p class="intro">Для сравнения: B понравился идеей, C внешним видом.</p>
+<div class="grid">
+  <figure><div class="frame"><iframe src="a-survey.html" title="A" loading="eager"></iframe></div><figcaption><div><b>A. Исполнительная съёмка</b><p>Светлый чертёж: поверх фото чертится контур участка, считаются площадь и цена. Наведите курсор на фото.</p></div><a href="a-survey.html" target="_blank">На весь экран</a></figcaption></figure>
+  <figure><div class="frame"><iframe src="b-section.html" title="B" loading="eager"></iframe></div><figcaption><div><b>B. Разрез дорожной одежды</b><p>Под фото слои дороги с толщинами, шкала глубины. Продаёт то, что под асфальтом.</p></div><a href="b-section.html" target="_blank">На весь экран</a></figcaption></figure>
+  <figure><div class="frame"><iframe src="c-material.html" title="C" loading="eager"></iframe></div><figcaption><div><b>C. Асфальт как материал</b><p>Кинематографично, как сайт премиум-автомобиля: фото раскрывается шторкой, крупный шрифт.</p></div><a href="c-material.html" target="_blank">На весь экран</a></figcaption></figure>
+  <figure><div class="frame"><iframe src="d-blind.html" title="D" loading="eager"></iframe></div><figcaption><div><b>D. Маршрутный указатель</b><p>Синее полотно в цветах лого, в окне перелистываются типы объектов и цены, как на автобусе.</p></div><a href="d-blind.html" target="_blank">На весь экран</a></figcaption></figure>
+</div>
+<script>
+const fit=()=>document.querySelectorAll('.frame').forEach(f=>{f.querySelector('iframe').style.transform=`scale(${f.clientWidth/1440})`});
+addEventListener('resize',fit);fit();
+</script>
+</body>
+</html>

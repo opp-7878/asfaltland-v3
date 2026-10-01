@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Эскиз A: Исполнительная съёмка</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--film:hsl(165 10% 94%);--film-2:hsl(165 9% 90%);--ink:hsl(222 46% 10%);--ink-2:hsl(222 18% 32%);--ink-3:hsl(222 10% 46%);--cobalt:hsl(221 72% 38%);--yellow:hsl(45 100% 55%);--line:hsl(222 30% 20% / .16)}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{background:var(--film);color:var(--ink);font:16px/1.55 "Wix Madefor Display",sans-serif;overflow:hidden;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M60 54v12M54 60h12' stroke='%230E1526' stroke-opacity='.22' stroke-width='1'/%3E%3C/svg%3E")}
+.mono{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums}
+header{height:84px;display:flex;align-items:center;gap:40px;padding:0 48px;border-bottom:1px solid var(--line)}
+header img{height:40px;width:auto}
+nav{display:flex;gap:28px;font-weight:600;font-size:15px;margin-left:16px}
+nav a{color:var(--ink);text-decoration:none}
+.h-right{margin-left:auto;display:flex;align-items:center;gap:24px}
+.phone{font-weight:700}
+.btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 24px;border-radius:4px;font:700 16px "Wix Madefor Display";text-decoration:none;color:var(--ink)}
+.btn-y{background:var(--yellow)}
+.btn-o{box-shadow:inset 0 0 0 1.5px var(--ink)}
+main{display:grid;grid-template-columns:4.6fr 7.4fr;gap:48px;padding:48px 48px 40px;height:calc(100% - 84px)}
+.left{display:flex;flex-direction:column;justify-content:center}
+.sheet-id{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:flex;gap:16px;margin-bottom:28px}
+.sheet-id span+span::before{content:"";display:inline-block;width:1px;height:10px;background:var(--line);margin-right:16px}
+h1{font-size:62px;line-height:1.02;letter-spacing:-.035em;font-weight:800;text-wrap:balance}
+.price{margin:28px 0 8px;display:flex;align-items:baseline;gap:16px}
+.price b{font:800 44px/1 "Wix Madefor Display";letter-spacing:-.02em}
+.price b small{font-size:.5em}
+.price span{color:var(--ink-2);font-size:15px}
+.legend{list-style:none;padding:0;margin:24px 0 36px;display:grid;gap:0;border-top:1px solid var(--line)}
+.legend li{display:grid;grid-template-columns:28px 1fr;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px;color:var(--ink-2)}
+.legend li b{color:var(--ink)}
+.legend svg{width:16px;height:16px}
+.acts{display:flex;gap:12px}
+.photo{position:relative;border:1px solid var(--ink);align-self:stretch;overflow:hidden;cursor:crosshair}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo svg.ov{position:absolute;inset:0;width:100%;height:100%}
+.corner{position:absolute;width:14px;height:14px;border-color:var(--ink);border-style:solid;border-width:0}
+.plate{position:absolute;left:0;bottom:0;background:var(--film);border-top:1px solid var(--ink);border-right:1px solid var(--ink);display:grid;grid-template-columns:auto auto auto;font-size:12px}
+.plate div{padding:10px 16px;border-right:1px solid var(--line)}
+.plate div:last-child{border:0}
+.plate small{display:block;color:var(--ink-3);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.readout{position:absolute;right:0;top:0;background:var(--ink);color:var(--film);font-size:12px;padding:8px 14px}
+.poly{fill:hsl(45 100% 55% / 0);stroke:var(--yellow);stroke-width:2.5;stroke-dasharray:8 7;transition:fill .8s ease-out}
+.poly.done{stroke-dasharray:none;fill:hsl(45 100% 55% / .16)}
+.dim{opacity:0;transition:opacity .5s ease-out}
+.dim.on{opacity:1}
+.tag{font:500 13px "JetBrains Mono"}
+.xh{opacity:0;transition:opacity .15s}
+.photo:hover .xh{opacity:1}
+.result{position:absolute;right:28px;bottom:28px;background:var(--film);border:1px solid var(--ink);padding:16px 20px;min-width:260px;opacity:0;transform:translateY(8px);transition:opacity .5s ease-out,transform .5s cubic-bezier(.16,1,.3,1)}
+.result.on{opacity:1;transform:none}
+.result small{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.result .s{font-size:15px;margin:4px 0 10px}
+.result .t{font:800 34px/1 "Wix Madefor Display";letter-spacing:-.02em}
+.result .t::after{content:"";display:block;height:3px;width:100%;background:var(--yellow);margin-top:10px}
+</style>
+</head>
+<body>
+<header>
+  <img src="../../v2/img/logo.png" alt="AsfaltLand">
+  <nav><a href="#">Работы и цены</a><a href="#">Смета</a><a href="#">Объекты</a><a href="#">Сроки</a><a href="#">Вопросы</a></nav>
+  <div class="h-right"><span class="phone mono">+7 (495) 123-45-67</span><a class="btn btn-y" href="#">Рассчитать смету</a></div>
+</header>
+<main>
+  <div class="left">
+    <p class="sheet-id mono"><span>Лист 01</span><span>Москва и МО</span><span>с 2008</span></p>
+    <h1>Асфальтирование в&nbsp;Москве и&nbsp;области</h1>
+    <p class="price"><b class="mono" style="font-family:'Wix Madefor Display'">от 890 <small>₽/м²</small></b><span>цена фиксируется<br>в договоре</span></p>
+    <ul class="legend">
+      <li><svg viewBox="0 0 16 16"><rect x="3" y="3" width="10" height="10" fill="none" stroke="#FFC61A" stroke-width="2" stroke-dasharray="3 2"/></svg><span><b>Замер бесплатно за 24 часа</b>, в выходные тоже</span></li>
+      <li><svg viewBox="0 0 16 16"><rect x="3" y="3" width="10" height="10" fill="#FFC61A" fill-opacity=".3" stroke="#FFC61A" stroke-width="2"/></svg><span><b>Гарантия 5 лет</b> отдельным пунктом договора</span></li>
+      <li><svg viewBox="0 0 16 16"><path d="M2 8h12M8 2v12" stroke="#1B48A8" stroke-width="2"/></svg><span><b>34 единицы своей техники</b>, без субподряда</span></li>
+    </ul>
+    <div class="acts"><a class="btn btn-y" href="#">Рассчитать смету</a><a class="btn btn-o" href="#">Позвонить инженеру</a></div>
+  </div>
+  <div class="photo" id="photo">
+    <img src="../../v2/img/hero-1672.webp" alt="">
+    <svg class="ov" viewBox="0 0 900 507" preserveAspectRatio="xMidYMid slice">
+      <polygon id="poly" class="poly" points="30,402 150,338 262,349 432,392 868,503 40,507"/>
+      <g fill="#FFC61A" stroke="#0E1526" stroke-width="1" class="dim" id="verts">
+        <rect x="26" y="398" width="8" height="8"/><rect x="146" y="334" width="8" height="8"/><rect x="258" y="345" width="8" height="8"/><rect x="428" y="388" width="8" height="8"/><rect x="864" y="499" width="8" height="8"/>
+      </g>
+      <g class="dim" id="dims">
+        <line x1="440" y1="372" x2="872" y2="484" stroke="#fff" stroke-width="1"/>
+        <g transform="translate(606 412) rotate(14.5)"><rect x="-38" y="-13" width="76" height="22" fill="#0E1526"/><text class="tag" fill="#fff" text-anchor="middle" y="3">32,4 м</text></g>
+        <line x1="22" y1="390" x2="142" y2="326" stroke="#fff" stroke-width="1"/>
+        <g transform="translate(70 346) rotate(-28)"><rect x="-38" y="-13" width="76" height="22" fill="#0E1526"/><text class="tag" fill="#fff" text-anchor="middle" y="3">18,9 м</text></g>
+      </g>
+      <g class="xh" id="xh" stroke="#fff" stroke-width=".8"><line id="xh-v" y1="0" y2="507"/><line id="xh-h" x1="0" x2="900"/></g>
+    </svg>
+    <span class="corner" style="top:10px;left:10px;border-top-width:1.5px;border-left-width:1.5px;border-color:#fff"></span>
+    <span class="corner" style="top:10px;right:10px;border-top-width:1.5px;border-right-width:1.5px;border-color:#fff"></span>
+    <p class="readout mono" id="readout">X —&nbsp;&nbsp;Y —</p>
+    <div class="plate mono"><div><small>Объект</small>Укладка верхнего слоя</div><div><small>Масштаб</small>1:200</div><div><small>Место</small>Московская обл.</div></div>
+    <div class="result" id="result"><small>Площадь по контуру</small><p class="s mono">S = <b id="area">0</b> м² × 890 ₽</p><p class="t mono" style="font-family:'Wix Madefor Display'">≈ <span id="sum">0</span> ₽</p></div>
+  </div>
+</main>
+<script>
+const poly=document.getElementById('poly'),len=poly.getTotalLength?poly.getTotalLength():2200;
+poly.style.strokeDashoffset=len;poly.style.strokeDasharray=len;
+requestAnimationFrame(()=>{poly.style.transition='stroke-dashoffset 1.8s cubic-bezier(.65,0,.35,1)';poly.style.strokeDashoffset=0});
+const fmt=n=>Math.round(n).toLocaleString('ru-RU');
+setTimeout(()=>{poly.style.transition='fill .8s ease-out';poly.style.strokeDasharray='';poly.classList.add('done');document.getElementById('verts').classList.add('on');document.getElementById('dims').classList.add('on')},1900);
+setTimeout(()=>{document.getElementById('result').classList.add('on');const t0=performance.now();const step=t=>{const k=Math.min(1,(t-t0)/1100),e=1-Math.pow(1-k,4);document.getElementById('area').textContent=fmt(612*e);document.getElementById('sum').textContent=fmt(544680*e);if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)},2500);
+const ph=document.getElementById('photo'),svg=ph.querySelector('svg'),ro=document.getElementById('readout');
+ph.addEventListener('pointermove',e=>{const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;const q=p.matrixTransform(svg.getScreenCTM().inverse());
+document.getElementById('xh-v').setAttribute('x1',q.x);document.getElementById('xh-v').setAttribute('x2',q.x);document.getElementById('xh-h').setAttribute('y1',q.y);document.getElementById('xh-h').setAttribute('y2',q.y);
+ro.innerHTML='X '+(q.x/12).toFixed(2).replace('.',',')+' м&nbsp;&nbsp;Y '+((507-q.y)/12).toFixed(2).replace('.',',')+' м'});
+</script>
+</body>
+</html>

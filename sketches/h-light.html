@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Эскиз H: Светлая разнесённая схема</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap">
+<style>
+:root{--ground:hsl(214 16% 93%);--ink:hsl(222 30% 10%);--ink-2:hsl(222 12% 38%);--yellow:hsl(45 100% 55%);--cobalt:hsl(221 72% 38%)}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{background:var(--ground);color:var(--ink);font:16px/1.55 Onest,sans-serif;overflow:hidden}
+.num{font-variant-numeric:tabular-nums}
+header{height:88px;display:flex;align-items:center;gap:44px;padding:0 56px}
+header img{height:38px}
+nav{display:flex;gap:32px;font-size:15px;font-weight:500}
+nav a{color:inherit;text-decoration:none}
+.h-right{margin-left:auto;display:flex;gap:28px;align-items:center;font-weight:500}
+.btn{display:inline-flex;align-items:center;gap:12px;height:54px;padding:0 26px;border-radius:999px;font:600 16px Onest;text-decoration:none}
+.btn-y{background:var(--yellow);color:var(--ink)}
+.btn-i{background:var(--ink);color:#fff}
+main{display:grid;grid-template-columns:1.05fr .95fr;height:calc(100% - 88px);padding:0 56px}
+.copy{display:flex;flex-direction:column;justify-content:center;padding-bottom:48px}
+h1{font-size:96px;line-height:.92;letter-spacing:-.055em;font-weight:600}
+h1 span{display:block;overflow:hidden;padding-bottom:.05em}
+h1 i{display:block;font-style:normal;transform:translateY(105%);animation:up 1s cubic-bezier(.16,1,.3,1) forwards}
+h1 span:nth-child(2) i{animation-delay:.1s}
+h1 span:nth-child(3) i{animation-delay:.2s;color:var(--cobalt)}
+@keyframes up{to{transform:none}}
+@keyframes fade{to{opacity:1}}
+.lead{margin:28px 0 32px;max-width:42ch;color:var(--ink-2);font-size:18px;opacity:0;animation:fade .8s ease-out .5s forwards}
+.lead b{color:var(--ink);font-weight:600}
+.acts{display:flex;gap:12px;opacity:0;animation:fade .8s ease-out .6s forwards}
+.photo{margin-top:44px;display:flex;gap:20px;align-items:center;opacity:0;animation:fade .8s ease-out .8s forwards}
+.photo img{width:180px;height:112px;object-fit:cover;border-radius:14px}
+.photo p{font-size:14px;color:var(--ink-2);max-width:26ch}
+.photo p b{display:block;color:var(--ink);font-size:28px;font-weight:600;letter-spacing:-.03em;line-height:1.1}
+.scene{position:relative;perspective:2200px}
+.iso{position:absolute;left:33%;top:52%;width:360px;height:360px;margin:-180px 0 0 -180px;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(-38deg)}
+.slab{position:absolute;inset:0;transform-style:preserve-3d;transform:translateZ(var(--z0));transition:transform 1.4s cubic-bezier(.16,1,.3,1)}
+.slab.open{transform:translateZ(var(--z1))}
+.face{position:absolute;display:block}
+.top{inset:0;transform:translateZ(var(--t))}
+.front{left:0;top:100%;width:100%;height:var(--t);transform-origin:top;transform:rotateX(90deg);filter:brightness(.72)}
+.side{top:0;left:100%;width:var(--t);height:100%;transform-origin:left;transform:rotateY(-90deg);filter:brightness(.55)}
+.face canvas{width:100%;height:100%;display:block}
+.cap{position:absolute;display:flex;align-items:center;gap:12px;font-size:14px;line-height:1.35;width:250px;opacity:0;transition:opacity .6s ease-out}
+.cap.on{opacity:1}
+.cap::before{content:"";flex:none;width:40px;height:1px;background:var(--ink)}
+.cap b{font-weight:600}
+.cap b{display:block;white-space:nowrap}.cap span span{color:var(--ink-2)}
+.total{position:absolute;right:0;bottom:40px;text-align:right;font-size:14px;color:var(--ink-2)}
+.total b{display:block;font-size:44px;color:var(--ink);font-weight:600;letter-spacing:-.04em;line-height:1}
+</style>
+</head>
+<body>
+<header><img src="../../v2/img/logo.png" alt="AsfaltLand"><nav><a href="#">Работы</a><a href="#">Смета</a><a href="#">Объекты</a><a href="#">Сроки</a><a href="#">Вопросы</a></nav><div class="h-right"><span class="num">+7 (495) 123-45-67</span><a class="btn btn-i" href="#" style="height:46px">Смета онлайн</a></div></header>
+<main>
+  <div class="copy">
+    <h1><span><i>Асфальт</i></span><span><i>в четыре слоя.</i></span><span><i>Не в один.</i></span></h1>
+    <p class="lead">Асфальтирование в Москве и области от 890 ₽/м². <b>Каждый слой с толщиной в смете</b>, замер бесплатно за 24 часа, гарантия 5 лет в договоре.</p>
+    <div class="acts"><a class="btn btn-y" href="#">Рассчитать смету →</a><a class="btn btn-i" href="#">Вызвать замерщика</a></div>
+    <div class="photo"><img src="../../v2/img/hero-900.webp" alt=""><p><b class="num">1 247 объектов</b>сдано с 2008 года, своя техника без субподряда</p></div>
+  </div>
+  <div class="scene" id="scene">
+    <div class="iso" id="iso"></div>
+    <p class="total num"><b>52 см</b>полная толщина конструкции</p>
+  </div>
+</main>
+<script src="layers.js"></script>
+<script>
+const iso=document.getElementById('iso'),scene=document.getElementById('scene'),S=360,PX=2.6;
+const L=Layers.LAYERS;let z=0;const zs=[];
+[...L].reverse().forEach(l=>{zs.unshift(z);z+=l.cm*PX});
+L.forEach((l,i)=>{const t=l.cm*PX,gap=(L.length-1-i)*46;const s=document.createElement('div');s.className='slab';s.style.setProperty('--t',t+'px');s.style.setProperty('--z0',(zs[i]+180)+'px');s.style.setProperty('--z1',(zs[i]+gap)+'px');
+ s.innerHTML=`<div class="face top"><canvas></canvas></div><div class="face front"><canvas></canvas></div><div class="face side"><canvas></canvas></div>`;iso.appendChild(s);
+ s.style.opacity=0;s.style.transitionDelay=(i*.12)+'s'});
+requestAnimationFrame(()=>{[...iso.children].forEach((s,i)=>s.querySelectorAll('canvas').forEach(c=>Layers.fill(c,L[i].key,.9)));
+ requestAnimationFrame(()=>[...iso.children].forEach(s=>{s.style.opacity=1;s.style.transition+=',opacity .5s';s.classList.add('open')}))});
+setTimeout(()=>{const sr=scene.getBoundingClientRect();[...iso.children].forEach((s,i)=>{const r=s.querySelector('.top').getBoundingClientRect();const p=document.createElement('p');p.className='cap';p.style.left=(iso.getBoundingClientRect().right-sr.left-10)+'px';p.style.top=(r.top-sr.top+r.height*.5-10)+'px';p.innerHTML=`<span><b>${L[i].name}</b> <span>${L[i].spec}</span></span>`;scene.appendChild(p);setTimeout(()=>p.classList.add('on'),60+i*120)})},1700);
+</script>
+</body>
+</html>
