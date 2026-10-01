@@ -26,7 +26,7 @@ body{background:var(--ink);color:var(--bone);font:16px/1.55 Onest,sans-serif;ove
 .obj{position:absolute;right:56px;bottom:32px;z-index:2;text-align:right;font-size:14px;color:#fff}
 .obj b{display:block;font-size:22px;font-weight:600;letter-spacing:-.01em}
 header{position:absolute;z-index:3;left:0;right:0;top:0;height:88px;display:flex;align-items:center;gap:44px;padding:0 56px;color:#fff}
-header img{height:36px}
+header .brand{display:inline-flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.03em}header .brand img{height:36px;width:36px}header .brand b{font-weight:700}
 nav{display:flex;gap:32px;font-size:15px;font-weight:500}
 nav a{color:inherit;text-decoration:none;opacity:.88}
 .h-right{margin-left:auto;display:flex;gap:28px;align-items:center;font-weight:500}
@@ -65,7 +65,7 @@ h1 span:nth-child(2) i{animation-delay:.32s}
     <div class="specs"><div><b class="num">890 ₽</b><small>от, за м² под ключ</small></div><div><b class="num">24 ч</b><small>до бесплатного замера</small></div><div><b class="num">5 лет</b><small>гарантии в договоре</small></div></div>
   </div>
 </div>
-<header><img src="../../v2/img/logo-light.png" alt="AsfaltLand"><nav><a href="#">Работы</a><a href="#">Смета</a><a href="#">Объекты</a><a href="#">Сроки</a><a href="#">Вопросы</a></nav><div class="h-right"><span class="num">+7 (495) 123-45-67</span><a class="btn btn-y" href="#" style="height:46px">Смета онлайн</a></div></header>
+<header><span class="brand"><img src="../img/logo.svg" alt="" width="38" height="38"><b>Везём Асфальт</b></span><nav><a href="#">Работы</a><a href="#">Смета</a><a href="#">Объекты</a><a href="#">Сроки</a><a href="#">Вопросы</a></nav><div class="h-right"><span class="num">+7 (495) 123-45-67</span><a class="btn btn-y" href="#" style="height:46px">Смета онлайн</a></div></header>
 <h1><span><i>Было так.</i></span><span><i>Сдали так.</i></span></h1>
 <script>
 const ba=document.getElementById('ba'),set=p=>ba.style.setProperty('--pos',Math.max(0,Math.min(100,p))+'%');

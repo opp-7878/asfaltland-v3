@@ -1,10 +1,10 @@
-# DESIGN.md — AsfaltLand v3 (light, modern)
+# DESIGN.md — Везём Асфальт v3 (light, modern)
 
 Recorded from the built page `v3/index.html` (2026-09-28). The v2 system in `../v2/DESIGN.md` («Паспорт объекта») does not apply here.
 
 ## Direction
 
-A clean, modern, light contractor site at full craft. There's no themed costume: price in the headline, proof through before/after, and a live estimate. Yellow is used only inside the logo. The single accent is an electric cobalt.
+A clean, modern, light contractor site at full craft. There's no themed costume: price in the headline, proof through before/after, and a live estimate. The mark is a black rounded square with a white road-cut A (`img/logo.svg`: `.plate` and `.mark` fills). The single accent is an electric cobalt.
 
 ## Color
 
@@ -53,7 +53,7 @@ Onest (Google Fonts, Cyrillic) is the only family, at weights 400–700.
 - **Reviews:** a scroll-snap carousel with prev/next buttons. The first card is a cobalt rating card.
 - **FAQ:** a sticky aside with a call card, plus a one-open accordion using `grid-template-rows` 0fr→1fr.
 - **Order:** a photo half under a dark gradient, and a form half with validation, a phone mask and a success state.
-- **Footer:** night background with the light logo.
+- **Footer:** night background with the same mark and a white wordmark, «Везём Асфальт».
 - **Mobile action bar:** Call and WhatsApp buttons below 768px.
 
 ## Motion
@@ -65,4 +65,4 @@ Onest (Google Fonts, Cyrillic) is the only family, at weights 400–700.
 
 ## Content
 
-Same copy, prices, photos and logo as v2. This is a demo concept: all numbers, reviews and contacts are placeholders (stated in the footer).
+Same copy, prices and photos as v2, with the «Везём Асфальт» mark. This is a demo concept: all numbers, reviews and contacts are placeholders (stated in the footer).

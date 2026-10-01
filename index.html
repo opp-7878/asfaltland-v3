@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AsfaltLand — асфальтирование в Москве и области от 890 ₽/м²</title>
+<title>Везём Асфальт — асфальтирование в Москве и области от 890 ₽/м²</title>
 <meta name="description" content="Асфальтирование в Москве и МО от 890 ₽/м². Своя техника, письменная гарантия 5 лет, бесплатный выезд замерщика за 24 часа. Онлайн-смета и фото объектов «до и после».">
 <meta name="theme-color" content="#F5F7FA">
-<meta property="og:title" content="AsfaltLand — асфальтирование в Москве и области">
+<meta property="og:title" content="Везём Асфальт — асфальтирование в Москве и области">
 <meta property="og:description" content="Цена от 890 ₽/м², смета онлайн, гарантия 5 лет в договоре.">
 <meta property="og:image" content="img/icon-512.png">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -83,7 +84,9 @@ html{scrollbar-color:var(--line-2) var(--bg)}
 .site-header{position:sticky;top:0;z-index:50;background:hsl(216 28% 97% / .96);border-bottom:1px solid transparent;transition:border-color .2s ease-out,box-shadow .2s ease-out}
 .site-header.is-scrolled{border-color:var(--line);box-shadow:0 6px 20px -12px hsl(222 40% 20% / .18)}
 .header-inner{display:flex;align-items:center;gap:32px;height:76px}
-.brand img{height:38px;width:auto}
+.brand{display:flex;align-items:center;gap:10px;flex:none;text-decoration:none;color:var(--ink)}
+.brand img{width:40px;height:40px}
+.brand span{font-weight:700;font-size:17px;letter-spacing:-.034em;line-height:1;white-space:nowrap}
 .nav{display:flex;gap:4px;margin-left:12px}
 .nav a{padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:500;font-size:15px;color:var(--ink-2);transition:color .15s,background-color .15s}
 .nav a:hover{color:var(--ink);background:var(--surface-2)}
@@ -404,7 +407,9 @@ html{scrollbar-color:var(--line-2) var(--bg)}
 /* footer */
 .site-footer{background:var(--night);color:var(--night-mute);padding:72px 0 32px}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:40px}
-.site-footer img{height:40px;width:auto;margin-bottom:18px}
+.site-footer a.brand{color:#fff;margin-bottom:18px}
+.site-footer .brand img{width:44px;height:44px}
+.site-footer .brand span{font-size:18px}
 .site-footer h4{color:#fff;font-size:15px;font-weight:600;margin-bottom:14px}
 .site-footer ul{display:grid;gap:10px;font-size:15px}
 .site-footer a{text-decoration:none;transition:color .15s}
@@ -448,7 +453,8 @@ html{scrollbar-color:var(--line-2) var(--bg)}
 @media (max-width:767px){
   body{padding-bottom:76px}
   .header-inner{height:68px;gap:12px}
-  .brand img{height:32px}
+  .brand img{width:36px;height:36px}
+  .brand span{font-size:15px}
   .header-phone,.header-contact .btn{display:none}
   .mobile-nav{inset:68px 0 0}
   .hero{padding:20px 0 56px}
@@ -511,7 +517,7 @@ html{scrollbar-color:var(--line-2) var(--bg)}
 <body>
 <!-- DIRECTION CONTRACT
 THESIS: A clean, modern, light contractor site at full craft: price in the headline, proof by before/after, a live estimate. It refuses themed costume and the dark-hero-plus-amber default of the niche.
-OWN-WORLD: Cool near-white ground and white surfaces, navy ink from the logo, one electric cobalt accent for action and state, a night-navy panel for the estimate and facts. Onest throughout, 24–32px radii, soft hsl shadows, Phosphor icons. Yellow lives only inside the logo.
+OWN-WORLD: Cool near-white ground and white surfaces, navy ink, one electric cobalt accent for action and state, a night-navy panel for the estimate and facts. Onest throughout, 24–32px radii, soft hsl shadows, Phosphor icons. The mark is a black rounded square with a white road-cut A.
 STORY: Visitor reads the price and terms, sees objects before and after, calculates an estimate, reads the contract clauses and reviews, books a free survey or calls.
 FIRST VIEWPORT: Left: H1 with the price in accent, lead, primary and secondary CTAs, proof row (rating, objects, fleet). Right: a fanned deck of four finished objects; the top card wipes from before to after, then flies off and the next comes forward (arrows, swipe, autoplay pauses on hover/focus/off-screen), caption with area and days, floating next-survey-slot card.
 FORM: category standard at full craft (user took the standing exit after two re-rolls and sketch rounds), seed e1e8be6f.
@@ -522,7 +528,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href="#top" aria-label="AsfaltLand — на главную"><img src="img/logo.png" alt="AsfaltLand" width="785" height="240"></a>
+    <a class="brand" href="#top" aria-label="Везём Асфальт — на главную"><img src="img/logo.svg" alt="" width="170" height="169"><span>Везём Асфальт</span></a>
     <nav class="nav" aria-label="Основное меню">
       <a href="#works">Работы и цены</a>
       <a href="#calc">Смета онлайн</a>
@@ -854,7 +860,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         </figure>
         <figure class="review">
           <div class="stars" aria-label="5 из 5"><svg class="icon"><use href="#i-star-fill"/></svg><svg class="icon"><use href="#i-star-fill"/></svg><svg class="icon"><use href="#i-star-fill"/></svg><svg class="icon"><use href="#i-star-fill"/></svg><svg class="icon"><use href="#i-star-fill"/></svg></div>
-          <blockquote>Как председатель СНТ сравнивал четыре сметы. У AsfaltLand вышло не дешевле всех, но единственные расписали толщину слоёв и основание. Дорога пережила уже две зимы.</blockquote>
+          <blockquote>Как председатель СНТ сравнивал четыре сметы. У «Везём Асфальт» вышло не дешевле всех, но единственные расписали толщину слоёв и основание. Дорога пережила уже две зимы.</blockquote>
           <figcaption><span class="avatar">МП</span><b>Михаил П.</b><span>председатель СНТ «Берёзка»</span></figcaption>
           <p class="review-object">Дорога СНТ · <b class="num">3 100 м²</b></p>
         </figure>
@@ -929,7 +935,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="img/logo-light.png" alt="AsfaltLand" width="785" height="240" loading="lazy">
+        <a class="brand" href="#top" aria-label="Везём Асфальт — на главную"><img src="img/logo.svg" alt="" width="170" height="169"><span>Везём Асфальт</span></a>
         <p>Асфальтирование, ямочный ремонт и разметка в Москве и Московской области с 2008 года.</p>
         <div class="socials">
           <a href="#" aria-label="Написать в WhatsApp"><svg class="icon"><use href="#i-whatsapp-logo"/></svg></a>
@@ -938,9 +944,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </div>
       <div><h4>Работы</h4><ul><li><a href="#works">Дороги и площадки</a></li><li><a href="#works">Парковки</a></li><li><a href="#works">Ямочный ремонт</a></li><li><a href="#works">Частные дома и СНТ</a></li><li><a href="#works">Разметка</a></li><li><a href="#works">Аренда техники</a></li></ul></div>
       <div><h4>Компания</h4><ul><li><a href="#objects">Объекты</a></li><li><a href="#contract">Гарантии</a></li><li><a href="#reviews">Отзывы</a></li><li><a href="#faq">Вопросы</a></li></ul></div>
-      <div><h4>Контакты</h4><ul><li><a class="footer-phone num" href="tel:+74951234567">+7 (495) 123-45-67</a></li><li><a href="mailto:zakaz@asfaltland.ru">zakaz@asfaltland.ru</a></li><li>Москва, Варшавское шоссе, 125, офис 14</li><li>Ежедневно, 8:00–21:00</li></ul></div>
+      <div><h4>Контакты</h4><ul><li><a class="footer-phone num" href="tel:+74951234567">+7 (495) 123-45-67</a></li><li><a href="mailto:zakaz@vezemasfalt.ru">zakaz@vezemasfalt.ru</a></li><li>Москва, Варшавское шоссе, 125, офис 14</li><li>Ежедневно, 8:00–21:00</li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2008–2026 AsfaltLand</span><span>Демонстрационный концепт: компания, цифры, отзывы и контакты условные.</span><a href="#">Политика конфиденциальности</a></div>
+    <div class="footer-bottom"><span>© 2008–2026 Везём Асфальт</span><span>Демонстрационный концепт: компания, цифры, отзывы и контакты условные.</span><a href="#">Политика конфиденциальности</a></div>
   </div>
 </footer>
 

@@ -15,7 +15,7 @@ body{background:var(--film);color:var(--ink);font:16px/1.55 "Wix Madefor Display
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M60 54v12M54 60h12' stroke='%230E1526' stroke-opacity='.22' stroke-width='1'/%3E%3C/svg%3E")}
 .mono{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums}
 header{height:84px;display:flex;align-items:center;gap:40px;padding:0 48px;border-bottom:1px solid var(--line)}
-header img{height:40px;width:auto}
+header .brand{display:inline-flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.03em}header .brand img{height:40px;width:40px}header .brand b{font-weight:700}
 nav{display:flex;gap:28px;font-weight:600;font-size:15px;margin-left:16px}
 nav a{color:var(--ink);text-decoration:none}
 .h-right{margin-left:auto;display:flex;align-items:center;gap:24px}
@@ -63,7 +63,7 @@ h1{font-size:62px;line-height:1.02;letter-spacing:-.035em;font-weight:800;text-w
 </head>
 <body>
 <header>
-  <img src="../../v2/img/logo.png" alt="AsfaltLand">
+  <span class="brand"><img src="../img/logo.svg" alt="" width="38" height="38"><b>Везём Асфальт</b></span>
   <nav><a href="#">Работы и цены</a><a href="#">Смета</a><a href="#">Объекты</a><a href="#">Сроки</a><a href="#">Вопросы</a></nav>
   <div class="h-right"><span class="phone mono">+7 (495) 123-45-67</span><a class="btn btn-y" href="#">Рассчитать смету</a></div>
 </header>

@@ -15,7 +15,7 @@ body{color:var(--calico);font:16px/1.55 "Golos Text",sans-serif;overflow:hidden;
   background-image:repeating-linear-gradient(0deg,hsl(0 0% 100% / .035) 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,hsl(0 0% 0% / .07) 0 1px,transparent 1px 3px),radial-gradient(120% 90% at 30% 20%,hsl(221 72% 42%),var(--cloth-d))}
 .num{font-variant-numeric:tabular-nums}
 header{height:88px;display:flex;align-items:center;gap:40px;padding:0 48px 0 104px}
-header img{height:38px}
+header .brand{display:inline-flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.03em}header .brand img{height:38px;width:38px}header .brand b{font-weight:700}
 .h-right{margin-left:auto;display:flex;align-items:center;gap:24px;font-weight:600}
 .btn{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 26px;border-radius:6px;font:700 17px Oswald;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
 .btn-y{background:var(--yellow);color:var(--ink)}
@@ -52,7 +52,7 @@ h1 b{color:var(--yellow);font-weight:600}
 </head>
 <body>
 <div class="tape"><a class="on" href="#"><span>Работы</span></a><a href="#"><span>Смета</span></a><a href="#"><span>Объекты</span></a><a href="#"><span>Сроки</span></a><a href="#"><span>Вопросы</span></a></div>
-<header><img src="../../v2/img/logo-light.png" alt="AsfaltLand"><div class="h-right"><span class="num">+7 (495) 123-45-67</span><a class="btn btn-y" href="#">Смета онлайн</a></div></header>
+<header><span class="brand"><img src="../img/logo.svg" alt="" width="38" height="38"><b>Везём Асфальт</b></span><div class="h-right"><span class="num">+7 (495) 123-45-67</span><a class="btn btn-y" href="#">Смета онлайн</a></div></header>
 <main>
   <div class="left">
     <div class="window">

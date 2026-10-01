@@ -14,7 +14,7 @@ html,body{height:100%}
 body{background:var(--ground);color:var(--ink);font:16px/1.55 Geologica,sans-serif;overflow:hidden;display:grid;grid-template-rows:84px minmax(0,1fr) 270px}
 .num{font-variant-numeric:tabular-nums}
 header{display:flex;align-items:center;gap:40px;padding:0 48px}
-header img{height:40px}
+header .brand{display:inline-flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.03em}header .brand img{height:40px;width:40px}header .brand b{font-weight:700}
 nav{display:flex;gap:28px;font-weight:500;font-size:15px;margin-left:16px}
 nav a{color:var(--ink);text-decoration:none}
 .h-right{margin-left:auto;display:flex;align-items:center;gap:24px;font-weight:600}
@@ -53,7 +53,7 @@ h1{font-size:60px;line-height:1;letter-spacing:-.04em;font-weight:800;text-wrap:
 </head>
 <body>
 <header>
-  <img src="../../v2/img/logo.png" alt="AsfaltLand">
+  <span class="brand"><img src="../img/logo.svg" alt="" width="38" height="38"><b>Везём Асфальт</b></span>
   <nav><a href="#">Работы и цены</a><a href="#">Смета</a><a href="#">Объекты</a><a href="#">Сроки</a><a href="#">Вопросы</a></nav>
   <div class="h-right"><span class="num">+7 (495) 123-45-67</span><a class="btn btn-y" href="#">Рассчитать смету</a></div>
 </header>
